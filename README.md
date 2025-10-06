@@ -9,7 +9,8 @@ Feedback is provided in terms of heuristic function
 </p>
 
 
-<h2>Algorithm:</h2>
+## Algorithm:
+```
 1. Generate a random initial solution of the same length as the target.
  2. Calculate the score as the ASCII difference between solution and target.
  3. If the score is zero, stop (solution found).
@@ -19,7 +20,7 @@ Feedback is provided in terms of heuristic function
 06/10/2025, 14:48
  Ex-5--Implement-Simple-Hill-Climbing-Algorithm/README.md at main · logesh1326/Ex-5--Implement-Simple-Hill-Climbing-Al…
  5. Accept the new solution if its score is better, otherwise repeat.
-
+```
 ## PROGRAM
 ```python
  import random, string
