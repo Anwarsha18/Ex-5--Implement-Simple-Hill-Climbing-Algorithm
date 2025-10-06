@@ -34,10 +34,11 @@ Feedback is provided in terms of heuristic function
  if score(new) < score(best): best = new
 ```
 
-<hr>
+
 ## Input 
 Enter the target string: Hi
 ## Output
+```
 60 K0
 6 Kf
 6 Kf
@@ -323,3 +324,6 @@ Enter the target string: Hi
 1 Hj
 1 Hj
 Final: Hi
+```
+## Result:
+Thus, the program is executed sucessfully.
