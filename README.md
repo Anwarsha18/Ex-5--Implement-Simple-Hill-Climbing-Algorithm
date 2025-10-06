@@ -11,15 +11,37 @@ Feedback is provided in terms of heuristic function
 
 ## Algorithm:
 ```
-1. Generate a random initial solution of the same length as the target.
- 2. Calculate the score as the ASCII difference between solution and target.
- 3. If the score is zero, stop (solution found).
- 4. Mutate the solution by changing one random character.
- https://github.com/logesh1326/Ex-5--Implement-Simple-Hill-Climbing-Algorithm/blob/main/README.md
- 1/4
-06/10/2025, 14:48
- Ex-5--Implement-Simple-Hill-Climbing-Algorithm/README.md at main · logesh1326/Ex-5--Implement-Simple-Hill-Climbing-Al…
- 5. Accept the new solution if its score is better, otherwise repeat.
+1. Start
+
+
+2. Input the target string from the user.
+
+
+3. Generate a random string of the same length using printable characters.
+
+
+4. Calculate the score (difference) between the random string and the target string.
+
+
+5. Repeat until the score becomes 0:
+
+Randomly change one character in the string.
+
+Calculate the new score.
+
+If the new score is better (smaller), accept the new string.
+
+
+
+6. When score = 0, the string matches the target.
+
+
+7. Print the final string.
+
+
+8. Stop
+
+
 ```
 ## PROGRAM
 ```python
