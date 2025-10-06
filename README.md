@@ -23,15 +23,24 @@ Feedback is provided in terms of heuristic function
 ## PROGRAM
 ```python
  import random, string
- answer = "Artificial Intelligence"
- gen = lambda: [random.choice(string.printable) for _ in range(len(answer))]
- score = lambda s: sum(abs(ord(a)-ord(b)) for a,b in zip(s,answer))
- best = gen()
- while True:
- print("Score:", score(best), "Solution:", "".join(best))
- if score(best) == 0: break
- new = best[:]; new[random.randrange(len(answer))] = random.choice(strin
- if score(new) < score(best): best = new
+
+def hill_climb():
+    target = input("Enter the target string: ")
+    sol = [random.choice(string.printable) for _ in target]
+    score = lambda s: sum(abs(ord(a)-ord(b)) for a,b in zip(s, target))
+    best, best_score = sol, score(sol)
+
+    while best_score:
+        print(best_score, "".join(best))
+        new = best.copy()
+        new[random.randrange(len(new))] = random.choice(string.printable)
+        new_score = score(new)
+        if new_score < best_score:
+            best, best_score = new, new_score
+
+    print("Final:", "".join(best))
+
+hill_climb()
 ```
 
 
